@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: metric-definition-consistency-checker
+version: 0.1.0
+description: Check metric declarations for formula, unit, grain, and accountable owner.
+skills:
+  - metric-definition-consistency-checker-skill
+tools:
+  - review-metric-definition-consistency-checker
+tags:
+  - data-analytics
+  - evidence-driven

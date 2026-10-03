@@ -1,0 +1,29 @@
+{
+  "slug": "metric-definition-consistency-checker",
+  "title": "Metric Definition Consistency Checker",
+  "category": "data-analytics",
+  "description": "Check metric declarations for formula, unit, grain, and accountable owner.",
+  "fields": {
+    "formula": {
+      "label": "formula",
+      "kind": "text",
+      "minimum": 20
+    },
+    "measurement_unit": {
+      "label": "measurement unit",
+      "kind": "required",
+      "minimum": 0
+    },
+    "aggregation_grain": {
+      "label": "aggregation grain",
+      "kind": "required",
+      "minimum": 0
+    },
+    "metric_owner": {
+      "label": "metric owner",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

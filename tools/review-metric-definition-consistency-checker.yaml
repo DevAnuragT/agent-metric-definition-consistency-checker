@@ -1,0 +1,59 @@
+{
+  "name": "review-metric-definition-consistency-checker",
+  "description": "Run Metric Definition Consistency Checker",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "formula": {
+            "type": "string",
+            "description": "formula"
+          },
+          "measurement_unit": {
+            "type": "string",
+            "description": "measurement unit"
+          },
+          "aggregation_grain": {
+            "type": "string",
+            "description": "aggregation grain"
+          },
+          "metric_owner": {
+            "type": "string",
+            "description": "metric owner"
+          }
+        },
+        "required": [
+          "formula",
+          "measurement_unit",
+          "aggregation_grain",
+          "metric_owner"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-metric-definition-consistency-checker.py",
+    "runtime": "python3"
+  }
+}
